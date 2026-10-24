@@ -61,9 +61,31 @@ The synthetic dataset includes:
 
 These are simulated events, not evidence of an actual security incident.
 
-## Screenshots
+## ## Screenshots
 
-Screenshots of the ingestion validation, SPL searches, and completed dashboard will be added here.
+### SOC Authentication Dashboard
+
+I built this dashboard to get an overview of authentication activity and make it easier to spot patterns worth investigating.
+
+![SOC Authentication Dashboard](screenshots/Soc-dashboard.png)
+
+### Failed Login Analysis
+
+This search groups failed login attempts by user to help identify accounts that may need further investigation.
+
+![Failed Login Analysis](screenshots/failed_logins.png)
+
+### Potential Brute-Force Detection
+
+This search highlights user and source IP combinations with three or more failed attempts within a five-minute time window.
+
+![Potential Brute-Force Detection](screenshots/potential_bruteforce_detection.png)
+
+### Authentication Sequence
+
+This view helps review authentication events and compare successful and failed login activity over time.
+
+![Authentication Sequence](screenshots/authentication_sequence.png)
 
 ## Limitations
 
