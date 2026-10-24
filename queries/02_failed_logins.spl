@@ -1,0 +1,9 @@
+index=main host=soc-lab action=failure
+| eval _time=strptime(timestamp,"%Y-%m-%dT%H:%M:%S")
+| stats count AS failed_attempts
+        min(_time) AS first_seen
+        max(_time) AS last_seen
+        BY user src_ip
+| convert ctime(first_seen) ctime(last_seen)
+| sort - failed_attempts
+

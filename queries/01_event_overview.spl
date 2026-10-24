@@ -1,0 +1,4 @@
+index=main host=soc-lab
+| eval _time=strptime(timestamp,"%Y-%m-%dT%H:%M:%S")
+| stats count BY action
+| sort - count
